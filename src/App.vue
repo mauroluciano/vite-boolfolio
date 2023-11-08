@@ -18,7 +18,9 @@ export default {
   methods: {
     fetchProjects(uri = this.api.baseUrl + "projects") {
       axios.get(uri).then((response) => {
-        this.projects = response.data.data;
+        console.log(response);
+        this.projects = response.data;
+        console.log(response.data);
       });
     },
   },
