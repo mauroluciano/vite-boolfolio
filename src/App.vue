@@ -16,8 +16,8 @@ export default {
   components: { ProjectList },
 
   methods: {
-    fetchProjects() {
-      axios.get(this.api.baseUrl + "projects").then((response) => {
+    fetchProjects(uri = this.api.baseUrl + "projects") {
+      axios.get(uri).then((response) => {
         this.projects = response.data.data;
       });
     },
@@ -31,6 +31,6 @@ export default {
 
 <template>
   <h1>hello world</h1>
-  <ProjectList />
+  <ProjectList :projects="projects" />
 </template>
 <style lang="scss"></style>
