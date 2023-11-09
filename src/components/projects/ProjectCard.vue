@@ -7,7 +7,7 @@ export default {
   },
 
   props: {
-    projects: Object,
+    project: Object,
   },
 };
 </script>
@@ -17,6 +17,7 @@ export default {
     <div class="card h-100">
       <div class="card-body">
         <h4>{{ project.name }}</h4>
+        <p>{{ project.description }}</p>
       </div>
     </div>
   </div>
