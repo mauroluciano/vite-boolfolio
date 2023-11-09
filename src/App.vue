@@ -33,6 +33,7 @@ export default {
 
 <template>
   <h1>hello world</h1>
+  <router-view></router-view>
   <ProjectList :projects="projects" />
 </template>
 <style lang="scss"></style>
