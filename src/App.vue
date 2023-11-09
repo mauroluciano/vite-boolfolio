@@ -7,7 +7,7 @@ export default {
 </script>
 
 <template>
-  <h1>hello world</h1>
+  <h1>Boolfolio</h1>
   <nav class="navbar navbar-expand-lg bg-light">
     <div class="container-fluid">
       <a class="navbar-brand" href="#">Navbar</a>
@@ -23,10 +23,10 @@ export default {
       </button>
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-          <li class="nav-item">
+          <li class="nav-item p-3">
             <router-link :to="{ name: 'homepage' }">Home</router-link>
           </li>
-          <li class="nav-item">
+          <li class="nav-item p-3">
             <router-link :to="{ name: 'portfolio' }">Portfolio</router-link>
           </li>
         </ul>
