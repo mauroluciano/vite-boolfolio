@@ -1,20 +1,37 @@
 <script>
 import ProjectList from "../components/projects/ProjectList.vue";
+import axios from "axios";
 
 export default {
   data() {
     return {
-      title: "Project page",
+      projects: [],
+
+      api: {
+        baseUrl: "http://127.0.0.1:8000/api/",
+      },
     };
   },
 
-  components: {
-    ProjectList,
+  components: { ProjectList },
+
+  methods: {
+    fetchProjects(uri = this.api.baseUrl + "projects") {
+      axios.get(uri).then((response) => {
+        console.log(response);
+        this.projects = response.data;
+        console.log(response.data);
+      });
+    },
+  },
+
+  created() {
+    this.fetchProjects();
   },
 };
 </script>
 
 <template>
-  <ProjectList />
+  <ProjectList :projects="projects" />
 </template>
 <style lang="scss" scoped></style>
